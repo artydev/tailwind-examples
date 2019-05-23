@@ -2,8 +2,16 @@ import m from "mithril";
 
 const cardcontainer = "p-6 w-full lg:w-1/2 xl:w-1/2 ";
 const card = "overflow-hidden shadow-lg bg-grey-darkest";
-const title = "font-bold text-xl mb-2 text-grey-light";
-const texte = "text-grey text-base";
+const title = "font-bold text-xl mb-2";
+const texte = "text-black font-light";
+
+const desc = `
+A large drop of sun lingered on the horizon and then dripped over\
+and was gone, and the sky was brilliant over the spot where it had\
+gone, and a torn cloud, like a bloody rag, hung over the spot of\
+its going. And dusk crept over the sky from the eastern horizon,\
+and darkness crept over the land from the east.
+`;
 
 export const Photo = {
   view: () =>
@@ -19,15 +27,7 @@ export const Photo = {
         }),
         m("div", { class: "px-6 py-4" }, [
           m("div", { class: title }, "A Cold Sunset"),
-          m(
-            "p",
-            { class: texte },
-            "A large drop of sun lingered on the horizon and then dripped over\
-          and was gone, and the sky was brilliant over the spot where it had\
-          gone, and a torn cloud, like a bloody rag, hung over the spot of\
-          its going. And dusk crept over the sky from the eastern horizon,\
-          and darkness crept over the land from the east."
-          )
+          m("p", { class: texte }, desc)
         ])
       ])
     )
